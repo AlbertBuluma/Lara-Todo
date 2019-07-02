@@ -26,6 +26,12 @@ class TodosController extends Controller
 
     public function store(){    //Storing new Todo item in database
 
+        $this->validate(request(), [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+
         $data = request()->all();
 
         $todo = new Todo();
