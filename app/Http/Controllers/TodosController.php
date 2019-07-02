@@ -26,11 +26,10 @@ class TodosController extends Controller
 
     public function store(){    //Storing new Todo item in database
 
-        $this->validate(request(), [
-            'name' => 'required',
+        $this->validate(request(),[
+            'name' => 'required|min:6|max:12',
             'description' => 'required'
         ]);
-
 
         $data = request()->all();
 
