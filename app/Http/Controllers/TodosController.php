@@ -16,7 +16,8 @@ class TodosController extends Controller
     public function show($todoId){  //Display ToDo item details
 
         $todo = Todo::find($todoId);
-        return view('todos.show')->with('todos',$todo);
+//        return view('todos.show')->with('todos',$todo);
+        return view('todos.show', compact('todo'));
     }
 
     public function create(){   //Create Todo item
