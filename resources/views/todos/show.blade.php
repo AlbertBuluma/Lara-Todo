@@ -13,6 +13,7 @@
                 </div>
             </div>
                 <a href="/todos/{{ $todo->id }}/edit" class="btn btn-info btn-sm my-3">Edit</a>
+                <a href="/todos/{{ $todo->id }}/delete" class="btn btn-danger btn-sm my-3">Delete</a>
         </div>
     </div>
 @endsection
