@@ -7,6 +7,15 @@
             <div class="card card-default">
                 <div class="card-header">Create Todo</div>
                 <div class="card-body">
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                                <ul class="list-group">
+                                    <li class="list-group-item">{{ $error }}</li>
+                                </ul>
+                            @endforeach
+                        </div>
+                    @endif
                     <form action="/store-todos" method="post">
                         @csrf
                         <div class="form-group">
