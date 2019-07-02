@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('todos', 'TodosController@index');
+
+Route::get('todos/{todos}', 'TodosController@show');
