@@ -11,8 +11,8 @@
                 <div class="card-body">
                     {{ $todo->description }}
                 </div>
-                <a href="/todos/{{ $todo->id }}/edit" class="btn btn-info">Edit</a>
             </div>
+                <a href="/todos/{{ $todo->id }}/edit" class="btn btn-info btn-sm my-3">Edit</a>
         </div>
     </div>
 @endsection
